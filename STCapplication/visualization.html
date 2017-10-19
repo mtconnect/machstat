@@ -1,0 +1,477 @@
+<!doctype html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+<style>
+html {
+  margin: 0;
+  height: 100%;
+  overflow: auto;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width:100%;
+  /*display: flex;
+  justify-content: center;
+  align-items: start;*/
+  background: black;
+  color: #ccc;
+  
+}
+
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+
+.macstat_heading{
+color:#FFFFFF;
+}
+.stars, .twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url('https://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
+  z-index:-1;
+}
+
+.twinkling{
+  background:transparent url('https://www.script-tutorials.com/demos/360/images/twinkling.png') repeat top center;
+  z-index:-1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.visualization_container{
+	margin:0;
+	width:100%;
+	height:100%; /*try max height when everything done*/
+	overflow:auto;
+	
+}
+
+
+._top{
+	max-width:100%;
+	height:20%;
+	border-width:1vmin;
+	border-style:solid;
+	border-color:transparent;
+	background-color:transparent;
+	overflow:hidden;
+	font-size:1.5vmin;
+	color:#FFFFFF;
+	margin-top:1vmin;
+	margin-bottom:1vmin;
+}
+
+.top_left{
+	border-width:1vmin;
+	border-style:solid;
+	border-color:#474447;
+	width:64%;
+	height:40%;
+	float:left;
+	background-color:transparent;
+	overflow:hidden;
+	
+}
+
+h4{
+	justify-content:center;
+	color: #FFFFFF;
+	font-size:2.3vmin;
+}
+
+.top_left_0{
+	font-size:3vmin;
+	vertical-align:middle;
+	color:#83F8FE;	
+	width:97%;
+	height:15%;
+}
+	
+.top_left_1{
+	width:46.5%;
+	border-width:1vmin;
+	border-style:solid;
+	border-color:transparent;
+	height:30%;
+	float:left;
+}
+
+.top_left_1_a{
+	width:50%;
+	height:100%;
+	float:left;
+}
+
+.top_left_1_b{
+	width:50%;
+	height:100%;
+	float:left;
+}
+
+
+.top_left_2{
+	border-width:1vmin;
+	border-style:solid;
+	border-color:transparent;
+	width:47%;
+	height:30%;
+	float:left;
+	
+}
+.top_left_2_a{
+	width:50%;
+	height:100%;
+	float:left;
+}
+
+.top_left_2_b{
+	width:50%;
+	height:100%;
+	float:left;
+}
+
+
+.top_left_3{
+	border-width:1vmin;
+	border-style:solid;
+	border-color:transparent;
+	width:46.5%;
+	height:30%;
+	float:left;
+}
+.top_left_3_a{
+	width:50%;
+	height:100%;
+	float:left;
+}
+
+.top_left_3_b{
+	width:50%;
+	height:100%;
+	float:left;
+}
+
+.top_left_4{
+	border-width:1vmin;
+	border-style:solid;
+	border-color:transparent;
+	width:47%;
+	height:30%;
+	float:left;
+}
+.top_left_4_a{
+	width:50%;
+	height:100%;
+	float:left;
+}
+
+.top_left_4_b{
+	width:50%;
+	height:100%;
+	float:left;
+}
+
+
+.piechart{
+	width:100%;
+	height:100%
+}
+
+.top_right{
+	margin-top:2vmin;
+	width:48%;
+	max-height:40%;
+	float:right;
+	border-width:1vmin;
+	border-style:solid;
+	border-color:#474447;
+	background-color:transparent;
+	overflow:auto;
+}
+
+.states{
+	width:50%;
+	height:100%;
+	float:left;
+	font-size:2.2vmin;
+	color:#83F8FE;
+}
+.values{
+	width:40%;
+	height:100%;
+	float:right;
+	font-size:2.2vmin;
+	color:#FFFFFF;
+}
+
+.hyperlink
+{color: #FFFFFF;
+text-decoration: none;
+}
+
+.top_right_heading
+{
+	font-size:1.8vmin;
+	color:#83F8FE;
+}
+
+h1{
+	color:#83F8FE;
+}
+
+
+ui{
+	font-size:3vmin;
+	color:#FFFFFF;
+}
+
+.flask_python_mtcagent
+{
+  margin: 0;
+  max-width: 100%;
+  font-size: 5vmin;
+  justify-content: flex-end;
+  vertical-align:middle;
+}
+
+
+
+
+
+.bottom_left{
+	margin-top:2vmin;
+	border-width:1vmin;
+	border-style:solid;
+	border-color:#474447;
+	width:48%;
+	height:auto;
+	float:left;
+	background-color:transparent;
+}
+	
+.bottom_right{
+	vertical-align:middle;
+	border-width:1vmin;
+	border-style:solid;
+	border-color:#474447;
+	width:32%;
+	height:40%;
+	float:right;
+	background-color:transparent;
+}
+
+._bottom{
+	margin-top:1vmin;
+	border-width:1vmin;
+	border-style:solid;
+	border-color:#474447;
+	width:99%;
+	height:50%;
+	float:left;
+	color:#FFFFFF;
+	background-color:transparent;
+}
+
+/*
+.border
+{ border-width: 3px; border-color: gray; border-style: solid; }
+*/
+
+
+</style>
+
+</head>
+<body>
+
+<div class="visualization_container">
+
+<div class="_top"><center>
+<div class="macstat_heading">
+<h1>MACH &nbsp - &nbsp STAT</h2>
+</div>
+<h1>MT CONNECT &nbsp DASHBOARD &nbsp : &nbsp Data Visualization & Monitoring</h1>
+<h2>{{id}}</h2></center>
+</div>
+
+<div class="top_left">
+<div class="top_left_0">
+<center><h3>Machine Status Update</h3></center>
+</div>
+<div class="top_left_1">
+<div class="top_left_1_a">
+<h4>Power State &nbsp : </h4>
+</div>
+<div class="top_left_1_b">
+<h4>{{powerState}}</h4>
+</div>
+</div>
+<div class="top_left_2">
+<div class="top_left_2_a">
+<h4>Execution State &nbsp : </h4>
+</div>
+<div class="top_left_2_b">
+<h4>{{execution}}</h4>
+</div>
+</div>
+<div class="top_left_3">
+<div class="top_left_3_a">
+<h4>Program file &nbsp : </h4>
+</div>
+<div class="top_left_3_b">
+<h4>{{prog}}</h4>
+</div>
+</div>
+<div class="top_left_4">
+<div class="top_left_4_a">
+<h4>Emergency Stop &nbsp : </h4>
+</div>
+<div class="top_left_4_b">
+<h4>{{estop}}</h4>
+</div>
+</div>
+</div>
+
+
+
+<div class="bottom_right">
+
+<div class="states">
+<center>
+<br />
+<h2>Part Count</h2>
+<br />
+<h2>Utilization</h2>
+<br />
+<h2>OEE</h2>
+</center>
+</div>
+
+<div class="values">
+<center>
+<br />
+<h2>{{partCount}}</h2>
+<br />
+<h2>{{utilization}}</h2>
+<br />
+<h2>NA</h2>
+</center>
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="bottom_left">
+<div class="piechart">
+<img height="auto" width="100%" src="{{uri}}"/>
+</div>
+</div>
+
+
+<div class="top_right">
+<div class="top_right_heading">
+<center><h1>Check out other Machines here!</h1></center>
+</div>
+<div class "flask_python_mtcagent">
+	<ul>
+
+		{% for x in MTCagentList %}
+			<li>{{ x[0] }}&nbsp &nbsp &nbsp 
+			<a class="hyperlink" href="{{x[1]}}">Agent</a>
+			&nbsp | &nbsp 
+			<a class="hyperlink" href="/{{x[0]}}">Dashboard</a>
+			</li>
+			<br />
+			
+		
+		{% endfor %}
+		<p> <br /> </p>
+	</ul>
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+<div class="stars"></div>
+<div class="twinkling"></div>
+
+
+
+	
+
+</body>
+
+
+</html>
+
+
+
+
