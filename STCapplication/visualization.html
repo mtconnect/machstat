@@ -1,12 +1,13 @@
 <!doctype html>
 <html>
 <head>
+<meta http-equiv="refresh" content="60">
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
 <style>
 html {
   margin: 0;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
 }
 
 body {
@@ -114,7 +115,7 @@ color:#FFFFFF;
 	border-style:solid;
 	border-color:#474447;
 	width:64%;
-	height:40%;
+	height:30%;
 	float:left;
 	background-color:transparent;
 	overflow:hidden;
@@ -227,7 +228,7 @@ h4{
 
 .top_right{
 	margin-top:2vmin;
-	width:48%;
+	width:56%;
 	max-height:40%;
 	float:right;
 	border-width:1vmin;
@@ -291,8 +292,8 @@ ui{
 	border-width:1vmin;
 	border-style:solid;
 	border-color:#474447;
-	width:48%;
-	height:auto;
+	width:40%;
+	height:40%;
 	float:left;
 	background-color:transparent;
 }
@@ -303,7 +304,7 @@ ui{
 	border-style:solid;
 	border-color:#474447;
 	width:32%;
-	height:40%;
+	height:30%;
 	float:right;
 	background-color:transparent;
 }
@@ -387,9 +388,7 @@ ui{
 <center>
 <br />
 <h2>Part Count</h2>
-<br />
 <h2>Utilization</h2>
-<br />
 <h2>OEE</h2>
 </center>
 </div>
@@ -398,9 +397,7 @@ ui{
 <center>
 <br />
 <h2>{{partCount}}</h2>
-<br />
 <h2>{{utilization}}</h2>
-<br />
 <h2>NA</h2>
 </center>
 </div>
@@ -421,7 +418,7 @@ ui{
 
 <div class="bottom_left">
 <div class="piechart">
-<img height="auto" width="100%" src="{{uri}}"/>
+<img height="100%" width="100%" src="{{uri}}"/>
 </div>
 </div>
 
@@ -435,9 +432,9 @@ ui{
 
 		{% for x in MTCagentList %}
 			<li>{{ x[0] }}&nbsp &nbsp &nbsp 
-			<a class="hyperlink" href="{{x[1]}}">Agent</a>
+			<a class="hyperlink" href="{{x[1]}}" target="_blank">Agent</a>
 			&nbsp | &nbsp 
-			<a class="hyperlink" href="/{{x[0]}}">Dashboard</a>
+			<a class="hyperlink" href="/machstat_machines/{{x[0]}}" target="_blank">Dashboard</a>
 			</li>
 			<br />
 			
