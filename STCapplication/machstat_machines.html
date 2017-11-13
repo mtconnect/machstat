@@ -277,20 +277,32 @@ ul
 	</div>
 
 	<div class="heading">
-		<h1>
-			
-			List of machines successfully connected <br />
-	
-		</h1>
+		{% if urlValid==True %}
+			<h1><center>
+			List of Machines Successfully Connected
+			</center></h1>
+		{% else %}
+			<h1><center>
+			List of Machines Successfully Connected
+			</center></h1>
+			<h5> Error Connecting the Last Machine. Invalid Agent Link. Try Again.</h5>
+		{% endif %}
 	</div>
 	<div class "flask_python">
 		<ul>
-
+			
+			<form action="" class="form-inline" method="post">
+			<input type="text" size="80vmin" class="form-control" placeholder="Add MTConnect URL here." name="add_machine" value="{{request.form.add_machine}}">
+			<input class="btn btn-default" type="submit" value="Add Machine">
+			</form>
+			
+			<br />
+			
 			{% for x in MTCagentList %}
 				<li>{{ x[0] }}&nbsp &nbsp &nbsp 
-				<a class="hyperlink" href="{{x[1]}}">Agent</a>
+				<a class="hyperlink" href="{{x[1]}}" target="_blank">Agent</a>
 				&nbsp | &nbsp 
-				<a class="hyperlink" href="/machstat_machines/{{x[0]}}">Dashboard</a>
+				<a class="hyperlink" href="/machstat_machines/{{x[0]}}" target="_blank">Dashboard</a>
 				</li>
 				<br />
 				
